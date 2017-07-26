@@ -50,5 +50,10 @@ set(MAIN_FILE client/main.c)
 
 add_definitions(-DVERSION="0.0")
 
+
 add_executable(bluetoothctl546_experiments ${SOURCE_FILES} ${MAIN_FILE})
 target_link_libraries(bluetoothctl546_experiments  ${DBUS_LIBRARIES} ${GLIB_LIBRARIES} ${Readline_LIBRARY})
+
+add_library(libbluetoothctl546_experiments ${SOURCE_FILES})
+target_link_libraries(libbluetoothctl546_experiments  ${DBUS_LIBRARIES} ${GLIB_LIBRARIES} ${Readline_LIBRARY})
+
